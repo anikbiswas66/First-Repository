@@ -42,5 +42,40 @@ namespace BankApplication
             get { return this.address; }
             set { this.address = value; }
         }
+        public void Withdraw(double amount)
+        {
+            if (balance < amount)
+            {
+                Console.WriteLine("Sorry, Insufficient funds!");
+            }
+            else if (amount <= 0)
+            {
+                Console.WriteLine("Invalid Amount!");
+            }
+            balance -= amount;
+            Console.WriteLine("Withdraw Done!");
+        }
+        public void Deposit(double amount)
+        {
+            if (amount <= 0)
+            {
+                Console.WriteLine("Sorry, Invalid deposit amount!");
+            }
+            balance += amount;
+            Console.WriteLine("Deposit Done!");
+        }
+        public void Transfer(Account receiver, double amount)
+        {
+            this.Withdraw(amount);
+            receiver.Deposit(amount);
+        }
+
+        public void ShowAccountInformation()
+        {
+            Console.WriteLine("_______________________________");
+            Console.WriteLine();
+            Console.WriteLine("Account Number: {0}\nAccount Name: {1}\nBalance: {2}\nAddress: {3}", this.accountNumber, this.accountName, this.balance, this.address);
+            this.address.GetAddress();
+        }
     }
 }
