@@ -1,0 +1,7 @@
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\bin\Debug\BankApplication.exe.config
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\bin\Debug\BankApplication.exe
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\bin\Debug\BankApplication.pdb
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\obj\Debug\BankApplication.csprojAssemblyReference.cache
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\obj\Debug\BankApplication.csproj.CoreCompileInputs.cache
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\obj\Debug\BankApplication.exe
+F:\Aiub\10th semester\C#\BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\BankApplication\obj\Debug\BankApplication.pdb
