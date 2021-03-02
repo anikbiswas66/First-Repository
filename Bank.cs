@@ -50,6 +50,32 @@ namespace BankApplication
                 Console.WriteLine("Account Deleted Successfully!");
             }
         }
+        public void Transaction(int transactionType, Account account, double amount)
+        {
+            if(int.Equals(transactionType,"Withdraw"))
+            {
+                for (int i = 0; i < myBank.Length; i++)
+                {
+                    if (myBank[i] == null)
+                    {
+                        //myBank[i] = account;
+                        account.Withdraw(amount);
+                        break;
+                    }
+                }
+            }
+            else if(int.Equals(transactionType, "Deposit"))
+            {
+                for (int i = 0; i < myBank.Length; i++)
+                {
+                    if (myBank[i] == null)
+                    {
+                        account.Deposit(amount);
+                        break;
+                    }
+                }
+            }
+        }
 
         public void PrintAllAccountDetails()
         {

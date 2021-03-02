@@ -19,6 +19,7 @@ namespace BankApplication
             bank.AddAccount(new Account(accountNo+3, "Jobbar", 80000, new Address("8", "111/G", "Sylhet", "Bangladesh")));
             bank.AddAccount(new Account(accountNo+4, "Hasan", 120000, new Address("12", "800/K", "Khulna", "Bangladesh")));
             bank.PrintAllAccountDetails();
+            bank.DeleteAccount(bank.MyBank[2]);
         }
     }
 }
