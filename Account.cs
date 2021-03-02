@@ -42,11 +42,7 @@ namespace BankApplication
             get { return this.address; }
             set { this.address = value; }
         }
-        //public string Branch
-        //{
-        //    get;
-        //    set;
-        //}
+
         public void Withdraw(double amount)
         {
             if (balance < amount)

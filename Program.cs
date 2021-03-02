@@ -27,7 +27,7 @@ namespace BankApplication
 
             //Print Details:
             bank.PrintAllAccountDetails();
-            bank.DeleteAccount(bank.MyBank[3]);
+            bank.DeleteAccount(bank.MyBank[1]);
         }
     }
 }
