@@ -26,6 +26,11 @@ namespace BankApplication
             set { this.myBank = value; }
             get { return this.myBank; }
         }
+        public string Branch
+        {
+            get;
+            set;
+        }
 
         public void AddAccount(Account account)
         {
@@ -49,11 +54,6 @@ namespace BankApplication
                 }
                 Console.WriteLine("Account Deleted Successfully!");
             }
-        }
-        enum Type : byte
-        {
-            Withdraw,
-            Deposit
         }
         public void Transaction(int transactionType, Account account, double amount)
         {
