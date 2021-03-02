@@ -50,9 +50,14 @@ namespace BankApplication
                 Console.WriteLine("Account Deleted Successfully!");
             }
         }
+        enum Type : byte
+        {
+            Withdraw,
+            Deposit
+        }
         public void Transaction(int transactionType, Account account, double amount)
         {
-            if(int.Equals(transactionType,"Withdraw"))
+            if(int.Equals(transactionType, 1))
             {
                 for (int i = 0; i < myBank.Length; i++)
                 {
@@ -64,7 +69,7 @@ namespace BankApplication
                     }
                 }
             }
-            else if(int.Equals(transactionType, "Deposit"))
+            else if(int.Equals(transactionType, 2))
             {
                 for (int i = 0; i < myBank.Length; i++)
                 {
