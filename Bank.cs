@@ -26,11 +26,11 @@ namespace BankApplication
             set { this.myBank = value; }
             get { return this.myBank; }
         }
-        public string Branch
-        {
-            get;
-            set;
-        }
+        //public string Branch
+        //{
+        //    get;
+        //    set;
+        //}
 
         public void AddAccount(Account account)
         {
