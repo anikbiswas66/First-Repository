@@ -45,58 +45,82 @@ namespace BankApplication
 
 
 
-        public void PerformTransactions(int transactionType, Account account, double amount)
+        //public void PerformTransactions(int transactionType, Account account, double amount)
+        //{
+        //    string amount1, amount2;
+        //    int a1, a2;
+        //    if (int.Equals(transactionType, 1))
+        //    {
+        //        for (int i = 0; i < myBank.Length; i++)
+        //        {
+        //            if (myBank[i] == null)
+        //            {
+        //                //myBank[i] = account;
+        //                Console.WriteLine("Enter your amout: ");
+        //                amount1 = Console.ReadLine();
+        //                a1 = Convert.ToInt32(amount1);
+        //                myBank[i].Deposit(a1);
+        //                break;
+
+        //            }
+        //        }
+        //    }
+        //    else if (int.Equals(transactionType, 2))
+        //    {
+        //        for (int i = 0; i < myBank.Length; i++)
+        //        {
+        //            if (myBank[i] == null)
+        //            {
+        //                Console.WriteLine("Enter your amout: ");
+        //                amount1 = Console.ReadLine();
+        //                a1 = Convert.ToInt32(amount1);
+        //                myBank[i].Withdraw(a1);
+        //                break;
+        //            }
+        //        }
+        //    }
+        //    else if (int.Equals(transactionType, 3))
+        //    {
+        //        for (int i = 0; i < myBank.Length; i++)
+        //        {
+        //            if (myBank[i] == null)
+        //            {
+        //                Console.WriteLine("Enter your amout: ");
+        //                amount2 = Console.ReadLine();
+        //                a2 = Convert.ToInt32(amount2);
+        //                myBank[i].Transfer(a2);
+        //                break;
+        //            }
+        //        }
+
+        //    }
+        //}
+
+        public void PerformTransactions(int transactionType, Account account, int accountNumber, double amount)
         {
-            string amount1, amount2;
-            int a1, a2;
-            if (int.Equals(transactionType, 1))
+            int count = 0;
+
+            string amount1, amount2, amount3;
+            int a1, a2, a3;
+
+            for (int i = 0; i < count; i++)
             {
-                for (int i = 0; i < myBank.Length; i++)
+                if (myBank[i].AccountNumber == accountNumber)
+                    Console.WriteLine("Ready to go!");
                 {
-                    if (myBank[i] == null)
+                    if (int.Equals(transactionType, 1))
                     {
-                        //myBank[i] = account;
-                        Console.WriteLine("Enter your amout: ");
+                        Console.WriteLine("Enter your amount: ");
                         amount1 = Console.ReadLine();
                         a1 = Convert.ToInt32(amount1);
                         myBank[i].Deposit(a1);
                         break;
-
                     }
                 }
             }
-            else if (int.Equals(transactionType, 2))
-            {
-                for (int i = 0; i < myBank.Length; i++)
-                {
-                    if (myBank[i] == null)
-                    {
-                        Console.WriteLine("Enter your amout: ");
-                        amount1 = Console.ReadLine();
-                        a1 = Convert.ToInt32(amount1);
-                        myBank[i].Withdraw(a1);
-                        break;
-                    }
-                }
-            }
-            else if (int.Equals(transactionType, 3))
-            {
-                for (int i = 0; i < myBank.Length; i++)
-                {
-                    if (myBank[i] == null)
-                    {
-                        Console.WriteLine("Enter your amout: ");
-                        amount2 = Console.ReadLine();
-                        a2 = Convert.ToInt32(amount2);
-                        myBank[i].Transfer(a2);
-                        break;
-                    }
-                }
 
-            }
-        }
 
-        public void PrintAllAccountDetails()
+            public void PrintAllAccountDetails()
         {
             for (int i = 0; i < myBank.Length; i++)
             {
