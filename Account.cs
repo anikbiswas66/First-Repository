@@ -55,7 +55,7 @@ namespace BankApplication
         public int Transaction
         {
             get { return this.transaction; }
-            //set { this.transaction = value; }
+            set { this.transaction = value; }
         }
 
         //public Address Address

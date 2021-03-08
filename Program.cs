@@ -71,7 +71,7 @@ namespace BankApplication
 
                                 SavingsAccount sa = new SavingsAccount(accountNo, accountName, b1, dob, address);
                             }
-                            else if (choice == "checking")
+                            else if (choice1 == "checking")
                             {
                                 Console.WriteLine("Enter Your Name : ");
                                 accountName = Console.ReadLine();
