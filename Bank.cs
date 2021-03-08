@@ -38,18 +38,18 @@ namespace BankApplication
                 }
             }
         }
-        public void DeleteAccount(Account account)
-        {
-            for (int j = 0; j < myBank.Length; j++)
-            {
-                if (myBank[j] == account)
-                {
-                    myBank[j] = null;
-                    break;
-                }
-                Console.WriteLine("Account Deleted Successfully!");
-            }
-        }
+        //public void DeleteAccount(Account account)
+        //{
+        //    for (int j = 0; j < myBank.Length; j++)
+        //    {
+        //        if (myBank[j] == account)
+        //        {
+        //            myBank[j] = null;
+        //            break;
+        //        }
+        //        Console.WriteLine("Account Deleted Successfully!");
+        //    }
+        //}
         public void Transaction(int transactionType, Account account, double amount)
         {
             if(int.Equals(transactionType, 1))

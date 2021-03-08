@@ -10,15 +10,22 @@ namespace BankApplication
     {
         private int accountNumber;
         private string accountName;
+        protected string dob, address;
         private double balance;
-        private Address address;
+        protected int accountType;
+        protected int transaction;
+        //private Address address;
 
-        public Account(int accountNumber, string accountName, double balance, Address address)
+        public Account(int accountNumber, string accountName, double balance, string dob, string address, int accountType)
         {
             this.accountNumber = accountNumber;
             this.accountName = accountName;
             this.balance = balance;
+            this.dob = dob;
             this.address = address;
+            this.accountType = accountType;
+            //this.transaction = transaction;
+            //this.address = address;
         }
         public int AccountNumber
         {
@@ -31,17 +38,37 @@ namespace BankApplication
             get { return this.accountName; }
             set { this.accountName = value; }
         }
+        public string DOB
+        {
+            get { return this.dob; }
+            set { this.dob = value; }
+        }
+        public string Address
+        {
+            get { return this.address; }
+            set { this.address = value; }
+        }
         public double Balance
         {
             get { return this.balance; }
             set { this.balance = value; }
         }
-
-        public Address Address
+        public int AccountType
         {
-            get { return this.address; }
-            set { this.address = value; }
+            get { return this.accountType; }
+            set { this.accountType = value; }
         }
+        public int Transaction
+        {
+            get { return this.transaction; }
+            set { this.transaction = value; }
+        }
+
+        //public Address Address
+        //{
+        //    get { return this.address; }
+        //    set { this.address = value; }
+        //}
 
         public void Withdraw(double amount)
         {
@@ -60,7 +87,7 @@ namespace BankApplication
         {
             if (amount <= 0)
             {
-                Console.WriteLine("Sorry, Invalid deposit amount!");
+                Console.WriteLine("Sorry, Invalid amount!");
             }
             balance += amount;
             Console.WriteLine("Deposit Done!");
@@ -70,13 +97,12 @@ namespace BankApplication
             this.Withdraw(amount);
             receiver.Deposit(amount);
         }
-
         public void ShowAccountInformation()
         {
             Console.WriteLine("_______________________________");
             Console.WriteLine();
-            Console.WriteLine("Account Number: {0}\nAccount Name: {1}\nBalance: {2}\nAddress: {3}", this.accountNumber, this.accountName, this.balance, this.address);
-            this.address.GetAddress();
+            Console.WriteLine("Account Number: {0}\nAccount Name: {1}\nDate Of Birth: {2}\nBalance: {3}\nAddress: {4}\nAccount Type: {5}", this.accountNumber, this.accountName, this.dob, this.balance, this.address, this.accountType);
+            //this.address.GetAddress();
         }
     }
 }
