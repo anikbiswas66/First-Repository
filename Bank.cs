@@ -43,9 +43,33 @@ namespace BankApplication
             }
         }
 
-        public void PerformTransactions(int transactionType, Account account, double amount)
-        {
-            if(int.Equals(transactionType, 1))
+        //public void PerformTransactions(int transactionType, Account account, int accountNumber, double amount)
+        //{
+            //int count = 0;
+
+            //string amount1, amount2, amount3;
+            //int a1, a2, a3;
+
+            //for (int i = 0; i < count; i++)
+            //{
+            //    if (myBank[i].AccountNumber == accountNumber)
+            //        Console.WriteLine("Ready to go!");
+            //    {
+            //        if(int.Equals(transactionType, 1))
+            //        {
+            //            Console.WriteLine("Enter your amount: ");
+            //            amount1 = Console.ReadLine();
+            //            a1 = Convert.ToInt32(amount1);
+            //            myBank[i].Deposit(a1);
+            //            break;
+            //        }
+
+            //    }
+            //}
+
+            public void PerformTransactions(int transactionType, Account account, double amount)
+            {
+            if (int.Equals(transactionType, 1))
             {
                 for (int i = 0; i < myBank.Length; i++)
                 {
@@ -57,7 +81,7 @@ namespace BankApplication
                     }
                 }
             }
-            else if(int.Equals(transactionType, 2))
+            else if (int.Equals(transactionType, 2))
             {
                 for (int i = 0; i < myBank.Length; i++)
                 {

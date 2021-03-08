@@ -11,7 +11,7 @@ namespace BankApplication
         private int accountNumber;
         private string accountName;
         protected string dob, address;
-        private double balance;
+        protected double balance;
         protected int accountType;
         protected int transaction;
         //private Address address;
