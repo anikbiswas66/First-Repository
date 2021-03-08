@@ -116,20 +116,55 @@ namespace BankApplication
                         myBank[i].Deposit(a1);
                         break;
                     }
-                }
-            }
 
-
-            public void PrintAllAccountDetails()
-        {
-            for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i] == null)
-                {
-                    continue;
+                    else if (int.Equals(transactionType, 2))
+                    {
+                        Console.WriteLine("Enter your amount: ");
+                        amount2 = Console.ReadLine();
+                        a2 = Convert.ToInt32(amount2);
+                        myBank[i].Withdraw(a2);
+                        break;
+                    }
+                    else if (int.Equals(transactionType, 3))
+                    {
+                        Console.WriteLine("Enter your amount: ");
+                        amount3 = Console.ReadLine();
+                        a3 = Convert.ToInt32(amount3);
+                        for (int j = 0; j < count; j++)
+                        {
+                            if (myBank[j].AccountNumber == accountNumber)
+                            {
+                                myBank[i].Transfer(myBank[j], a3);
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        //for (i = 0; i < myBank.Length; i++)
+                        //{
+                        //    if (myBank[i] == null)
+                        //    {
+                        //        continue;
+                        //    }
+                        //    myBank[i].ShowAccountInformation();
+                        Console.WriteLine("Account Number is: " + myBank[i].AccountNumber);
+                        Console.WriteLine("Account Balance is: " + myBank[i].balance);
+                    }
                 }
-                myBank[i].ShowAccountInformation();
             }
         }
     }
-}
+  }
+
+            //// void PrintAllAccountDetails()
+            ////{
+            //for (int i = 0; i < myBank.Length; i++)
+            //{
+            //    if (myBank[i] == null)
+            //    {
+            //        continue;
+            //    }
+            //    myBank[i].ShowAccountInformation();
+            //    //    }
+            //    //
