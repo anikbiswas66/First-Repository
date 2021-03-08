@@ -16,7 +16,7 @@ namespace BankApplication
             this.dob = dob;
             this.address = address;
         }
-        public void Withdraw(double amount)
+        public new void Withdraw(double amount)
         {
             if (base.balance > amount && amount > 0)
             {
@@ -28,7 +28,7 @@ namespace BankApplication
             }
         }
 
-        public void Deposit(double amount)
+        public new void Deposit(double amount)
         {
             if (amount > 0)
             {
