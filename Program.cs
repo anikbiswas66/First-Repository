@@ -17,28 +17,33 @@ namespace BankApplication
             accountNo++;
 
             Bank bank = new Bank("YO Bank", 1000);
-            Console.WriteLine("___________________________");
-            Console.WriteLine("Welcome to YO Bank!");
-            Console.WriteLine("___________________________");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("<><><><> Welcome to NoName Bank! <><><><>");
+            Console.WriteLine("-----------------------------------------");
 
             //for(int i = 0; i<10; i++)
             //{
             bool repeat = true;
             while (repeat)
             {
-                Console.WriteLine("Here are your Options: ");
+                Console.WriteLine("<><><><> Here are your Options: <><><><>");
                 Console.WriteLine("Open a Bank account");
                 Console.WriteLine("Perform transactions for an account");
                 Console.WriteLine("Exit the application");
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine("Enter your choice: ");
                 choice = Console.ReadLine();
 
                 switch (choice)
                 {
                     case "open":
                         {
+                            Console.WriteLine("-----------------------------------------");
                             Console.WriteLine("Open Savings Account");
                             Console.WriteLine("Open Checking Account");
                             Console.WriteLine("Exit from the application");
+                            Console.WriteLine("-----------------------------------------");
+                            Console.WriteLine("Enter your choice: ");
                             string choice1 = Console.ReadLine();
 
                             if (choice1 == "quit")
@@ -89,11 +94,14 @@ namespace BankApplication
                         }
                     case "account":
                         {
+                            Console.WriteLine("-----------------------------------------");
                             Console.WriteLine("Make a deposit");
                             Console.WriteLine("Make a withdrawal");
                             Console.WriteLine("Make a transfer");
                             Console.WriteLine("Show the number transactions and balance");
                             Console.WriteLine("Exit the application");
+                            Console.WriteLine("-----------------------------------------");
+                            Console.WriteLine("Enter your choice: ");
                             string choice2 = Console.ReadLine();
 
                             if (choice2 == "quit")
@@ -102,19 +110,19 @@ namespace BankApplication
                             }
                             else if (choice2 == "deposit")
                             {
-                                bank.PerformTransactions(1, accountNo);
+                                bank.PerformTransactions("deposit", accountNo);
                             }
                             else if (choice2 == "withdraw")
                             {
-                                bank.PerformTransactions(2, accountNo);
+                                bank.PerformTransactions("withdraw", accountNo);
                             }
                             else if (choice2 == "transfer")
                             {
-                                bank.PerformTransactions(3, accountNo);
+                                bank.PerformTransactions("transfer", accountNo);
                             }
                             else if (choice2 == "show")
                             {
-                                bank.PerformTransactions(4, accountNo);
+                                bank.PerformTransactions("show", accountNo);
                             }
                             break;
                         }

@@ -12,18 +12,16 @@ namespace BankApplication
         public string accountName;
         protected string dob, address;
         public double balance;
-        //public int accountType;
         public int transaction;
         //private Address address;
 
-        public Account(int accountNumber, string accountName, double balance, string dob, string address) //int accountType
+        public Account(int accountNumber, string accountName, double balance, string dob, string address)
         {
             this.accountNumber = accountNumber;
             this.accountName = accountName;
             this.balance = balance;
             this.dob = dob;
             this.address = address;
-            //this.accountType = accountType;
             //this.transaction = transaction;
             //this.address = address;
         }
@@ -53,15 +51,11 @@ namespace BankApplication
             get { return this.balance; }
             set { this.balance = value; }
         }
-        //public int AccountType
-        //{
-        //    get { return this.accountType; }
-        //    set { this.accountType = value; }
-        //}
+
         public int Transaction
         {
             get { return this.transaction; }
-            set { this.transaction = value; }
+            //set { this.transaction = value; }
         }
 
         //public Address Address

@@ -42,73 +42,82 @@ namespace BankApplication
                 }
             }
         }
-
-
-
-        //public void PerformTransactions(int transactionType, Account account, double amount)
-        //{
-        //    string amount1, amount2;
-        //    int a1, a2;
-        //    if (int.Equals(transactionType, 1))
-        //    {
-        //        for (int i = 0; i < myBank.Length; i++)
-        //        {
-        //            if (myBank[i] == null)
-        //            {
-        //                //myBank[i] = account;
-        //                Console.WriteLine("Enter your amout: ");
-        //                amount1 = Console.ReadLine();
-        //                a1 = Convert.ToInt32(amount1);
-        //                myBank[i].Deposit(a1);
-        //                break;
-
-        //            }
-        //        }
-        //    }
-        //    else if (int.Equals(transactionType, 2))
-        //    {
-        //        for (int i = 0; i < myBank.Length; i++)
-        //        {
-        //            if (myBank[i] == null)
-        //            {
-        //                Console.WriteLine("Enter your amout: ");
-        //                amount1 = Console.ReadLine();
-        //                a1 = Convert.ToInt32(amount1);
-        //                myBank[i].Withdraw(a1);
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    else if (int.Equals(transactionType, 3))
-        //    {
-        //        for (int i = 0; i < myBank.Length; i++)
-        //        {
-        //            if (myBank[i] == null)
-        //            {
-        //                Console.WriteLine("Enter your amout: ");
-        //                amount2 = Console.ReadLine();
-        //                a2 = Convert.ToInt32(amount2);
-        //                myBank[i].Transfer(a2);
-        //                break;
-        //            }
-        //        }
-
-        //    }
-        //}
-
-        public void PerformTransactions(int transactionType, int accountNumber)
+        public void PrintAllAccountDetails()
         {
-            int count = 0;
+            for (int i = 0; i < myBank.Length; i++)
+            {
+                if (myBank[i] == null)
+                {
+                    continue;
+                }
+                myBank[i].ShowAccountInformation();
+            }
+        }
+
+
+                //public void PerformTransactions(int transactionType, Account account, double amount)
+                //{
+                //    string amount1, amount2;
+                //    int a1, a2;
+                //    if (int.Equals(transactionType, 1))
+                //    {
+                //        for (int i = 0; i < myBank.Length; i++)
+                //        {
+                //            if (myBank[i] == null)
+                //            {
+                //                //myBank[i] = account;
+                //                Console.WriteLine("Enter your amout: ");
+                //                amount1 = Console.ReadLine();
+                //                a1 = Convert.ToInt32(amount1);
+                //                myBank[i].Deposit(a1);
+                //                break;
+
+                //            }
+                //        }
+                //    }
+                //    else if (int.Equals(transactionType, 2))
+                //    {
+                //        for (int i = 0; i < myBank.Length; i++)
+                //        {
+                //            if (myBank[i] == null)
+                //            {
+                //                Console.WriteLine("Enter your amout: ");
+                //                amount1 = Console.ReadLine();
+                //                a1 = Convert.ToInt32(amount1);
+                //                myBank[i].Withdraw(a1);
+                //                break;
+                //            }
+                //        }
+                //    }
+                //    else if (int.Equals(transactionType, 3))
+                //    {
+                //        for (int i = 0; i < myBank.Length; i++)
+                //        {
+                //            if (myBank[i] == null)
+                //            {
+                //                Console.WriteLine("Enter your amout: ");
+                //                amount2 = Console.ReadLine();
+                //                a2 = Convert.ToInt32(amount2);
+                //                myBank[i].Transfer(a2);
+                //                break;
+                //            }
+                //        }
+
+                //    }
+                //}
+
+        public void PerformTransactions(string transactionType, int accountNumber)
+        {
 
             string amount1, amount2, amount3;
             int a1, a2, a3;
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < myBank.Length; i++)
             {
                 if (myBank[i].AccountNumber == accountNumber)
                     Console.WriteLine("Ready to go!");
                 {
-                    if (int.Equals(transactionType, 1))
+                    if (transactionType == "deposit")
                     {
                         Console.WriteLine("Enter your amount: ");
                         amount1 = Console.ReadLine();
@@ -117,7 +126,7 @@ namespace BankApplication
                         break;
                     }
 
-                    else if (int.Equals(transactionType, 2))
+                    else if (transactionType == "withdraw")
                     {
                         Console.WriteLine("Enter your amount: ");
                         amount2 = Console.ReadLine();
@@ -125,12 +134,12 @@ namespace BankApplication
                         myBank[i].Withdraw(a2);
                         break;
                     }
-                    else if (int.Equals(transactionType, 3))
+                    else if (transactionType == "transfer")
                     {
                         Console.WriteLine("Enter your amount: ");
                         amount3 = Console.ReadLine();
                         a3 = Convert.ToInt32(amount3);
-                        for (int j = 0; j < count; j++)
+                        for (int j = 0; j < myBank.Length; j++)
                         {
                             if (myBank[j].AccountNumber == accountNumber)
                             {
@@ -139,7 +148,7 @@ namespace BankApplication
                             }
                         }
                     }
-                    else if (int.Equals(transactionType, 4))
+                    else if (transactionType == "show")
                     {
                         //for (i = 0; i < myBank.Length; i++)
                         //{
@@ -150,6 +159,7 @@ namespace BankApplication
                         //    myBank[i].ShowAccountInformation();
                         Console.WriteLine("Account Number is: " + myBank[i].AccountNumber);
                         Console.WriteLine("Account Balance is: " + myBank[i].balance);
+                        myBank[i].ShowAccountInformation();
                     }
                     else
                         break;
