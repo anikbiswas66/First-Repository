@@ -96,7 +96,7 @@ namespace BankApplication
         //    }
         //}
 
-        public void PerformTransactions(int transactionType, Account account, int accountNumber, double amount)
+        public void PerformTransactions(int transactionType, int accountNumber)
         {
             int count = 0;
 
@@ -139,7 +139,7 @@ namespace BankApplication
                             }
                         }
                     }
-                    else
+                    else if (int.Equals(transactionType, 4))
                     {
                         //for (i = 0; i < myBank.Length; i++)
                         //{
@@ -151,6 +151,8 @@ namespace BankApplication
                         Console.WriteLine("Account Number is: " + myBank[i].AccountNumber);
                         Console.WriteLine("Account Balance is: " + myBank[i].balance);
                     }
+                    else
+                        break;
                 }
             }
         }
