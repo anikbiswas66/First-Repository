@@ -11,8 +11,6 @@ namespace BankApplication
         static void Main(string[] args)
         {
             string choice, accountName, dob, address;
-            int accountNumber;
-            string balance;
 
             Random rnd = new Random();
             int accountNo = rnd.Next(100, 1000);
@@ -26,15 +24,15 @@ namespace BankApplication
             //for(int i = 0; i<10; i++)
             //{
             bool repeat = true;
-            while(repeat)
+            while (repeat)
             {
                 Console.WriteLine("Here are your Options: ");
-                Console.WriteLine("1. Open a Bank account");
-                Console.WriteLine("2. Perform transactions for an account");
-                Console.WriteLine("3. Exit the application");
+                Console.WriteLine("Open a Bank account");
+                Console.WriteLine("Perform transactions for an account");
+                Console.WriteLine("Exit the application");
                 choice = Console.ReadLine();
 
-                switch(choice)
+                switch (choice)
                 {
                     case "open":
                         {
@@ -68,7 +66,7 @@ namespace BankApplication
 
                                 SavingsAccount sa = new SavingsAccount(accountNo, accountName, b1, dob, address);
                             }
-                            else if(choice == "checking")
+                            else if (choice == "checking")
                             {
                                 Console.WriteLine("Enter Your Name : ");
                                 accountName = Console.ReadLine();
@@ -102,12 +100,33 @@ namespace BankApplication
                             {
                                 break;
                             }
-                            else
+                            else if (choice2 == "deposit")
                             {
                                 bank.PerformTransactions(1, accountNo);
                             }
+                            else if (choice2 == "withdraw")
+                            {
+                                bank.PerformTransactions(2, accountNo);
+                            }
+                            else if (choice2 == "transfer")
+                            {
+                                bank.PerformTransactions(3, accountNo);
+                            }
+                            else if (choice2 == "show")
+                            {
+                                bank.PerformTransactions(4, accountNo);
+                            }
+                            break;
                         }
+                    case "quit":
+                        return;
+
+                    default:
+                        Console.WriteLine("Sorry, Wrong Input!");
+                        break;
+                }
             }
         }
     }
 }
+
