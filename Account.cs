@@ -8,22 +8,22 @@ namespace BankApplication
 {
     class Account
     {
-        private int accountNumber;
-        private string accountName;
+        public int accountNumber;
+        public string accountName;
         protected string dob, address;
-        protected double balance;
-        protected int accountType;
-        protected int transaction;
+        public double balance;
+        //public int accountType;
+        public int transaction;
         //private Address address;
 
-        public Account(int accountNumber, string accountName, double balance, string dob, string address, int accountType)
+        public Account(int accountNumber, string accountName, double balance, string dob, string address) //int accountType
         {
             this.accountNumber = accountNumber;
             this.accountName = accountName;
             this.balance = balance;
             this.dob = dob;
             this.address = address;
-            this.accountType = accountType;
+            //this.accountType = accountType;
             //this.transaction = transaction;
             //this.address = address;
         }
@@ -53,11 +53,11 @@ namespace BankApplication
             get { return this.balance; }
             set { this.balance = value; }
         }
-        public int AccountType
-        {
-            get { return this.accountType; }
-            set { this.accountType = value; }
-        }
+        //public int AccountType
+        //{
+        //    get { return this.accountType; }
+        //    set { this.accountType = value; }
+        //}
         public int Transaction
         {
             get { return this.transaction; }
@@ -101,7 +101,7 @@ namespace BankApplication
         {
             Console.WriteLine("_______________________________");
             Console.WriteLine();
-            Console.WriteLine("Account Number: {0}\nAccount Name: {1}\nDate Of Birth: {2}\nBalance: {3}\nAddress: {4}\nAccount Type: {5}", this.accountNumber, this.accountName, this.dob, this.balance, this.address, this.accountType);
+            Console.WriteLine("Account Number: {0}\nAccount Name: {1}\nDate Of Birth: {2}\nBalance: {3}\nAddress: {4}", this.accountNumber, this.accountName, this.dob, this.balance, this.address);
             //this.address.GetAddress();
         }
     }
