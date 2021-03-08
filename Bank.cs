@@ -27,30 +27,23 @@ namespace BankApplication
             get { return this.myBank; }
         }
 
-        public void AddAccount(Account account)
+        public void OpenAccount(Account account)
         {
             for (int i = 0; i < myBank.Length; i++)
             {
                 if (myBank[i] == null)
                 {
                     myBank[i] = account;
+
+                    Console.WriteLine("Welcome, New Account has opened Successfully!");
+                    Console.WriteLine("Account Number is: " + myBank[i].AccountNumber);
+
                     break;
                 }
             }
         }
-        //public void DeleteAccount(Account account)
-        //{
-        //    for (int j = 0; j < myBank.Length; j++)
-        //    {
-        //        if (myBank[j] == account)
-        //        {
-        //            myBank[j] = null;
-        //            break;
-        //        }
-        //        Console.WriteLine("Account Deleted Successfully!");
-        //    }
-        //}
-        public void Transaction(int transactionType, Account account, double amount)
+
+        public void PerformTransactions(int transactionType, Account account, double amount)
         {
             if(int.Equals(transactionType, 1))
             {
