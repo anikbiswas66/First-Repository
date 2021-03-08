@@ -8,7 +8,7 @@ namespace BankApplication
 {
     class SavingsAccount:Account
     {
-        public SavingsAccount(int accountNumber, string accountName, double balance, string dob, string address, int accountType):base(accountNumber, accountName, balance, dob, address)
+        public SavingsAccount(int accountNumber, string accountName, double balance, string dob, string address):base(accountNumber, accountName, balance, dob, address)
         {
             this.accountNumber = accountNumber;
             this.accountName = accountName;

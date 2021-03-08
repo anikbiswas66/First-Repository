@@ -8,26 +8,26 @@ namespace BankApplication
 {
     class Program
     {
+        //Random rnd = new Random();
+        //int accountNo = rnd.Next(1, 1000);
         static void Main(string[] args)
         {
-            //Random rnd = new Random();
-            //int accountNo = rnd.Next(1, 1000);
+            string choice; 
+            Bank bank = new Bank("YO Bank", 1000);
+            Console.WriteLine("___________________________");
+            Console.WriteLine("Welcome to YO Bank!");
+            Console.WriteLine("___________________________");
 
-            Bank bank = new Bank("Personal Bank", 5);
-            bank.AddAccount(new Account(1, "Rahim", 20000, new Address("2", "101/A", "Dhaka", "Bangladesh")));
-            bank.AddAccount(new Account(2, "Karim", 40000, new Address("4", "102/B", "Barisal", "Bangladesh")));
-            bank.AddAccount(new Account(3, "Jamal", 60000, new Address("6", "202/C", "Rajshahi", "Bangladesh")));
-            bank.AddAccount(new Account(4, "Jobbar", 80000, new Address("8", "111/G", "Sylhet", "Bangladesh")));
+            for(int i = 0; i<10; i++)
+            {
+                Console.WriteLine("Here are your Options: ");
+                Console.WriteLine("Open a Bank account");
+                Console.WriteLine("Perform transactions for an account");
+                Console.WriteLine("Exit the application");
+                choice = Console.ReadLine();
 
-            //Transactions:
-            bank.Transaction(1, bank.myBank[0], 500);
-            bank.Transaction(2, bank.myBank[0], 100);
-            bank.Transaction(2, bank.myBank[1], 400);
-            bank.Transaction(1, bank.myBank[1], 100);
 
-            //Print Details:
-            bank.PrintAllAccountDetails();
-            //bank.DeleteAccount(bank.MyBank[1]);
+            }
         }
     }
 }
