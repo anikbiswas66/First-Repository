@@ -18,9 +18,9 @@ namespace BankApplication
         }
         override public void Withdraw(double amount)
         {
-            if (base.balance > amount && amount == 0)
+            if (balance > amount && amount == 0)
             {
-                base.Balance -= amount;
+                Balance -= amount;
             }
         }
 
@@ -28,7 +28,7 @@ namespace BankApplication
         {
             if (amount > 0)
             {
-                base.Balance += amount;
+                Balance += amount;
             }
             else
             {
