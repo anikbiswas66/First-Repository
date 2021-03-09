@@ -64,7 +64,7 @@ namespace BankApplication
         //    set { this.address = value; }
         //}
 
-        public void Withdraw(double amount)
+        virtual public void Withdraw(double amount)
         {
             if (balance < amount)
             {
@@ -77,7 +77,7 @@ namespace BankApplication
             balance -= amount;
             Console.WriteLine("Withdraw Done!");
         }
-        public void Deposit(double amount)
+        virtual public void Deposit(double amount)
         {
             if (amount <= 0)
             {

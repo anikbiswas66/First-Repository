@@ -110,19 +110,19 @@ namespace BankApplication
                             }
                             else if (choice2 == "deposit")
                             {
-                                bank.PerformTransactions("deposit", accountNo);
+                                bank.PerformTransactions("deposit");
                             }
                             else if (choice2 == "withdraw")
                             {
-                                bank.PerformTransactions("withdraw", accountNo);
+                                bank.PerformTransactions("withdraw");
                             }
                             else if (choice2 == "transfer")
                             {
-                                bank.PerformTransactions("transfer", accountNo);
+                                bank.PerformTransactions("transfer");
                             }
                             else if (choice2 == "show")
                             {
-                                bank.PerformTransactions("show", accountNo);
+                                bank.PerformTransactions("show");
                             }
                             break;
                         }
